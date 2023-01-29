@@ -1,0 +1,32 @@
+{
+  "name": "myapp-cli",
+  "version": "2.0.5",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "unbuild"
+  },
+  "bin": {
+    "wow": "./dist/index.mjs"
+  },
+	"files": [
+    "dist",
+    "templates/template-*",
+    "!templates/template-*/dist",
+    "!templates/template-*/node_modules",
+    "!templates/template-*/pnpm-lock.yaml",
+		"templates/template-ts-only/*"
+  ],
+  "author": "lorea-jin",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "7.2.0",
+    "fs-extra": "^11.1.0",
+    "inquirer": "^9.1.4",
+    "ora": "^6.1.2",
+    "unbuild": "^1.1.1"
+  }
+}
